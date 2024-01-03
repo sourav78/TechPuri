@@ -119,8 +119,8 @@
 			/* z-index: -1; */
 		}
 
-		.content:hover ~ .circle {
-			transform: scale(1.5);
+		.content:hover .circle {
+			display: none;
 		}
 
 		/* Sliding bar */
@@ -182,7 +182,190 @@
 			border: 1px solid black;
 		}
 
+		/* wheely */
 
+		.wheely {
+			width: 50%;
+			margin: 50px auto;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.wheel {
+			width: 20px;
+			height: 20px;
+			background-color: #3b3b3b;
+			animation: wheelyy 2s ease-in-out infinite alternate;
+		}
+
+		.wheel2 {
+			animation: wheelyy2 2s ease-in-out infinite alternate;
+		}
+
+		/* New technologies */
+
+		.new-tech {
+			margin: 80px 0;
+			padding-block: 50px;
+			background-color: aliceblue;
+		}
+
+		.technology {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.tech-content {
+			width: 50%;
+			min-width: 300px;
+		}
+
+		.tech-content h3 {
+			font-size: 32px;
+			color: #6a6a6a;
+		}
+
+		.tech-content h2 {
+			font-size: 55px;
+			color: #000000;
+		}
+
+		.tech-content p {
+			font-size: 18px;
+			color: #000000;
+			margin-bottom: 20px;
+		}
+
+		.tech-img img {
+			width: 100%;
+			min-width: 300px;
+			height: 500px;
+		}
+
+		/* Our services */
+
+		.our-service {
+			padding-top: 80px;
+		}
+
+		.services {
+			/* border: 1px solid black; */
+		}
+
+		.service-head {
+			text-align: center;
+		}
+
+		.service-title {
+			display: inline-block;
+			position: relative;
+			font-weight: 300;
+			font-size: 40px;
+			text-align: center;
+		}
+
+		.service-title::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #000000;
+			bottom: 0;
+			left: 0;
+			transition: all 0.3s ease;
+		}
+
+		.service-title:hover::after {
+			transform: scale(1.1);
+		}
+
+		.all-services {
+			margin-top: 50px;
+			padding: 10px 50px;
+			/* border: 1px solid black; */
+		}
+
+		.service {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			gap: 100px;
+			margin-bottom: 80px;
+		}
+
+		.service1 {
+			flex-direction: row-reverse;
+		}
+
+		.sub-service {
+			max-width: 60%;
+			width: 100%;
+			border: 1px solid black;
+			padding: 20px;
+		}
+
+		.service-img {
+			border: 2px solid black;
+			height: 350px;
+		}
+
+		.service-img img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			margin: 0;
+		}
+
+		.sub-service-content {
+			margin-top: 10px;
+		}
+
+		.sub-service-content h3 {
+			font-size: 32px;
+			font-weight: 300;
+		}
+
+		.sub-service-content p {
+			font-size: 18px;
+			color: #3b3b3b;
+		}
+
+		/* .service-content{
+			display: flex;
+			flex-direction: column;
+		} */
+
+		.service-content h2 {
+			font-size: 45px;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
+
+		.service-content a {
+			font-size: 20px;
+			font-weight: 300;
+			text-decoration: none;
+			border: 1px solid black;
+			padding: 8px 10px;
+			transition: all ease-in-out 0.2s;
+		}
+
+
+		.service-content a:hover {
+			border: 1px solid #007dd6;
+			background-color: #007dd6;
+			color: #fff;
+		}
+
+		.student-head h2 {
+			font-size: 40px;
+		}
+
+		.student-head .student-title {
+			font-weight: 300;
+		}
 
 		@media screen and (max-width: 1020px) {
 			.nav-bar {
@@ -196,6 +379,33 @@
 			.about-para {
 				margin-top: 20px;
 				width: 80%;
+			}
+
+			.technology {
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.tech-content {
+				width: 100%;
+				min-width: 300px;
+			}
+
+			.tech-img {
+				width: 100%;
+			}
+
+			.tech-img img {
+				width: 100%;
+			}
+
+			.all-services {
+				margin-top: 50px;
+				padding: 10px 0px;
+				/* border: 1px solid black; */
 			}
 		}
 
@@ -265,6 +475,65 @@
 				font-weight: 300;
 				font-size: 40px;
 			}
+
+			.tech-content h2 {
+				font-size: 50px;
+				color: #000000;
+			}
+
+			.wheely {
+				width: 80%;
+				margin: 50px auto;
+				padding: 0 30px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.our-service {
+				padding-top: 50px;
+			}
+
+			.service {
+				flex-direction: column;
+				gap: 10px;
+				margin-bottom: 50px;
+			}
+
+			.sub-service {
+				max-width: 100%;
+				width: 100%;
+				border: 1px solid black;
+				padding: 20px;
+			}
+
+			.service-img {
+				height: 250px;
+			}
+
+			.service-content {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				/* gap: 50px; */
+			}
+
+			.service-content h2 {
+				font-size: 30px;
+				font-weight: 300;
+				margin-bottom: 20px;
+			}
+
+			.service-content a {
+				min-width: 100px;
+				font-size: 18px;
+				padding: 5px 8px;
+			}
+
+			.student-head h2 {
+				font-size: 32px;
+			}
 		}
 
 		@media screen and (max-width: 468px) {
@@ -286,6 +555,55 @@
 				font-size: 16px;
 				color: #535353;
 			}
+
+			.tech-img img {
+				min-width: 100%;
+				max-height: 300px;
+			}
+
+			.tech-content {
+				width: 100%;
+				min-width: 100%;
+			}
+
+			.tech-content h3 {
+				font-size: 28px;
+				color: #6a6a6a;
+			}
+
+			.tech-content h2 {
+				font-size: 35px;
+				color: #000000;
+			}
+
+			.tech-content p {
+				font-size: 18px;
+				color: #000000;
+				margin-bottom: 20px;
+			}
+
+			.our-service {
+				padding-top: 20px;
+			}
+
+			.service-content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				justify-content: space-between;
+				/* gap: 50px; */
+			}
+
+			.service-content h2 {
+				font-size: 28px;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+
+			.student-head h2 {
+				font-size: 26px;
+			}
 		}
 
 		@keyframes slidingDot {
@@ -295,6 +613,26 @@
 
 			to {
 				left: 100%;
+			}
+		}
+
+		@keyframes wheelyy {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes wheelyy2 {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(-360deg);
 			}
 		}
 	</style>
@@ -400,7 +738,80 @@
 					<a class="about-more" href="#">Know More</a>
 				</div>
 			</div>
-			<div class="" style="height: 3000px;"></div>
+
+			<div class="wheely">
+				<div class="wheel wheel1"></div>
+				<div class="wheel wheel2"></div>
+				<div class="wheel wheel3"></div>
+			</div>
+
+			<div class="new-tech padder">
+				<div class="technology">
+					<div class="tech-content">
+						<h3>New Technologies</h3>
+						<h2>Digital Transformation</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima veritatis cupiditate maiores
+							ducimus magnam provident eius autem amet, tenetur rem laboriosam quas eum sapiente rerum
+							aliquid deleniti doloremque, repellendus accusamus.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima veritatis cupiditate maiores
+							ducimus magnam provident eius autem amet, tenetur rem laboriosam quas eum sapiente rerum
+							aliquid deleniti doloremque, .</p>
+					</div>
+					<div class="tech-img">
+						<img src="./images/new-tech.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="our-service padder">
+				<div class="services">
+					<div class="service-head">
+						<h2 class="service-title">Our Services</h2>
+					</div>
+					<div class="all-services">
+						<div class="service">
+							<div class="sub-service">
+								<div class="service-img">
+									<img src="./images/web_dev.jpg" alt="">
+								</div>
+								<div class="sub-service-content">
+									<h3>Website Development</h3>
+									<p>We make SEO friendly</p>
+									<p>business friendly websites</p>
+								</div>
+							</div>
+							<div class="service-content">
+								<h2>Create Your Own <span style="color: #007dd6;">Website</span></h2>
+								<a href="">Click Here</a>
+							</div>
+						</div>
+						<div class="service service1 content">
+							<div class="sub-service">
+								<div class="service-img">
+									<img src="./images/app_dev.jpg" alt="">
+								</div>
+								<div class="sub-service-content">
+									<h3>Application Development</h3>
+									<p>We create atractive user interface</p>
+									<p>and user friendly Android and iOS Apps</p>
+								</div>
+							</div>
+							<div class="service-content">
+								<h2>Create Your Own <span style="color: #007dd6;">Application</span></h2>
+								<a href="">Click Here</a>
+							</div>
+						</div>
+						<div class="students">
+							<div class="student-head">
+								<h2>We also provide</h2>
+								<h2 class="student-title"><span style="color: #007dd6;">College and School </span>level
+									projects for <span style="color: #c12b0d;">Students</span></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="" style="height: 300px;"></div>
 		</div>
 	</div>
 
