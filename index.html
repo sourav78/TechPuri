@@ -113,7 +113,7 @@
 			position: fixed;
 			width: 50px;
 			height: 50px;
-			border: 1px solid black;
+			border: 1px solid rgb(127, 127, 127);
 			border-radius: 50%;
 			pointer-events: none;
 			/* z-index: -1; */
@@ -250,9 +250,9 @@
 			padding-top: 80px;
 		}
 
-		.services {
+		/* .services {
 			/* border: 1px solid black; */
-		}
+		/* } */
 
 		.service-head {
 			text-align: center;
@@ -300,10 +300,18 @@
 		}
 
 		.sub-service {
+			cursor: grab;
 			max-width: 60%;
 			width: 100%;
 			border: 1px solid black;
+			border-radius: 10px;
 			padding: 20px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+			transition: all ease-in-out 0.2s;
+		}
+
+		.sub-service:hover {
+			background-color: #007dd62f;
 		}
 
 		.service-img {
@@ -343,7 +351,7 @@
 			margin-bottom: 20px;
 		}
 
-		.service-content a {
+		/* .service-content a {
 			font-size: 20px;
 			font-weight: 300;
 			text-decoration: none;
@@ -357,7 +365,50 @@
 			border: 1px solid #007dd6;
 			background-color: #007dd6;
 			color: #fff;
+		} */
+
+		.service-btn {
+			padding: 8px 12px;
+			border: 2px solid #007dd6;
+			position: relative;
+			overflow: hidden;
+			background-color: transparent;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 16px;
+			transition: .3s;
+			z-index: 1;
+			font-family: inherit;
+			color: #17C3B2;
+			transition: all ease 0.2s;
 		}
+
+		.service-btn::before {
+			content: '';
+			width: 0;
+			height: 300%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background: #007dd6;
+			transition: .5s ease;
+			display: block;
+			z-index: -1;
+		}
+
+		.service-btn:hover::before {
+			width: 105%;
+		}
+
+		.service-btn:hover a {
+			color: #ffffff;
+		}
+
+		.service-btn a {
+			text-decoration: none;
+		}
+
 
 		.student-head h2 {
 			font-size: 40px;
@@ -365,6 +416,85 @@
 
 		.student-head .student-title {
 			font-weight: 300;
+		}
+
+		.small-projects {
+			width: 80%;
+			/* border: 1px solid black; */
+			padding: 10px;
+			margin: 40px auto;
+		}
+
+		.projects {
+			margin-bottom: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.proj {
+			/* border: 1px solid black; */
+			width: 400px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			background-color: aliceblue;
+			padding: 20px;
+			box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+		}
+
+		.proj img {
+			width: 60px;
+		}
+
+		.proj p {
+			font-size: 26px;
+			font-weight: 600;
+		}
+
+		/* Tech experties */
+
+		.tech-experties {
+			margin-top: 50px;
+			padding-block: 50px;
+			background-color: aliceblue;
+		}
+
+		.experties {
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+		}
+
+		.expr-content {
+			width: 50%;
+			/* border: 1px solid black; */
+		}
+
+		.expr-content h2 {
+			font-size: 40px;
+			font-weight: 300;
+		}
+
+		.tech-stacks {
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			flex-wrap: wrap;
+		}
+
+		.tech-stacks img {
+			width: 70px;
+		}
+
+		.expr-img {
+			width: 40%;
+		}
+
+		.expr-img img {
+			width: 100%;
+			mix-blend-mode: multiply;
 		}
 
 		@media screen and (max-width: 1020px) {
@@ -406,6 +536,29 @@
 				margin-top: 50px;
 				padding: 10px 0px;
 				/* border: 1px solid black; */
+			}
+
+			.small-projects {
+				width: 100%;
+				/* border: 1px solid black; */
+				padding: 10px;
+				margin: 40px auto;
+			}
+
+			.projects {
+				gap: 20px;
+			}
+
+			.tech-stacks {
+				margin-top: 30px;
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+
+			.tech-stacks img {
+				width: 50px;
 			}
 		}
 
@@ -502,8 +655,7 @@
 			.sub-service {
 				max-width: 100%;
 				width: 100%;
-				border: 1px solid black;
-				padding: 20px;
+				padding: 10px;
 			}
 
 			.service-img {
@@ -533,6 +685,23 @@
 
 			.student-head h2 {
 				font-size: 32px;
+			}
+
+			.proj p {
+				font-size: 20px;
+			}
+
+			.experties{
+				flex-direction: column-reverse;
+			}
+
+			.expr-img {
+				width: 70%;
+				margin: auto;
+			}
+
+			.expr-content {
+				width: 100%;
 			}
 		}
 
@@ -603,6 +772,26 @@
 
 			.student-head h2 {
 				font-size: 26px;
+			}
+
+			.small-projects {
+				margin-top: 20px;
+			}
+
+			.projects {
+				flex-direction: column;
+			}
+
+			.proj {
+				width: 100%;
+			}
+
+			.proj p {
+				font-size: 20px;
+			}
+
+			.expr-content h2 {
+				font-size: 30px;
 			}
 		}
 
@@ -782,7 +971,8 @@
 							</div>
 							<div class="service-content">
 								<h2>Create Your Own <span style="color: #007dd6;">Website</span></h2>
-								<a href="">Click Here</a>
+								<!-- <a class="service-btn" href="">Click Here</a> -->
+								<button class="service-btn"><a href="">Click here</a></button>
 							</div>
 						</div>
 						<div class="service service1 content">
@@ -798,7 +988,8 @@
 							</div>
 							<div class="service-content">
 								<h2>Create Your Own <span style="color: #007dd6;">Application</span></h2>
-								<a href="">Click Here</a>
+								<!-- <a class="service-btn" href="">Click Here</a> -->
+								<button class="service-btn"><a href="">Click here</a></button>
 							</div>
 						</div>
 						<div class="students">
@@ -807,7 +998,66 @@
 								<h2 class="student-title"><span style="color: #007dd6;">College and School </span>level
 									projects for <span style="color: #c12b0d;">Students</span></h2>
 							</div>
+							<div class="small-projects">
+								<div class="projects">
+									<div class="proj">
+										<img src="./images/icons/c.png" alt="">
+										<p>C Projects</p>
+									</div>
+									<div class="proj">
+										<img src="./images/icons/c++.png" alt="">
+										<p>C++ Projects</p>
+									</div>
+								</div>
+								<div class="projects">
+									<div class="proj">
+										<img src="./images/icons/java.png" alt="">
+										<p>Java Projects</p>
+									</div>
+									<div class="proj">
+										<img src="./images/icons/python.png" alt="">
+										<p>Python Projects</p>
+									</div>
+								</div>
+								<div class="projects">
+									<div class="proj">
+										<img src="./images/icons/android.png" alt="">
+										<p>Android Projects</p>
+									</div>
+									<div class="proj">
+										<img src="./images/icons/code.png" alt="">
+										<p>Web Dev Projects</p>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tech-experties padder">
+				<div class="experties">
+					<div class="expr-content">
+						<h2>Our Tech Experties</h2>
+						<div class="tech-stacks">
+							<img src="./images/icons/jsvsscript.png" alt="">
+							<img src="./images/icons/flutter.png" alt="">
+							<img src="./images/icons/android.png" alt="">
+							<img src="./images/icons/react.png" alt="">
+							<img src="./images/icons/java.png" alt="">
+							<img src="./images/icons/python.png" alt="">
+							<img src="./images/icons/html.png" alt="">
+							<img src="./images/icons/css.png" alt="">
+							<img src="./images/icons/node.png" alt="">
+							<img src="./images/icons/php.png" alt="">
+							<img src="./images/icons/mongodb.png" alt="">
+							<img src="./images/icons/sql.png" alt="">
+							<img src="./images/icons/github.png" alt="">
+							<img src="./images/icons/bootstrap.png" alt="">
+						</div>
+					</div>
+					<div class="expr-img">
+						<img src="./images/tech_exp.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -860,3 +1110,5 @@
 </body>
 
 </html>
+
+<!-- https://uiverse.io/vinodjangid07/bitter-eagle-34 -->
