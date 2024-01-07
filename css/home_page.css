@@ -277,7 +277,7 @@
 } */
 
 .service-btn {
-    padding: 8px 12px;
+    padding: 8px 18px;
     border: 2px solid #007dd6;
     position: relative;
     overflow: hidden;
@@ -404,6 +404,23 @@
 .expr-img img {
     width: 100%;
     mix-blend-mode: multiply;
+}
+
+/* glance */
+
+.glance{
+    margin-top: 80px;
+}
+.galnce-cont{
+    text-align: center;
+}
+.galnce-cont h2{
+    font-size: 40px;
+}
+.galnce-cont p{
+    font-weight: bold;
+    margin-block: 20px;
+    color: #3b3b3b;
 }
 
 .goto{

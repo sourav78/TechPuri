@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+.padder {
+    padding-inline: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.hero {
+    height: 45vh;
+    background-image: url('../images/contact-back.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.695);
+    /* Adjust the last value (0.5) for the desired level of dimness */
+}
+
+.hero-header {
+    font-size: 80px;
+    margin-top: 100px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.except-hero {
+    position: relative;
+    padding-top: 50px;
+    background-color: #0b0b0b;
+}
+
+/* Coonect */
+
+.connect-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.connect-box {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 250px;
+    flex: 1;
+    /* width: 100%;
+            height: 100%; */
+    border: 1px solid rgb(171, 171, 171);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+}
+
+.box i {
+    font-size: 40px;
+}
+
+.box a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.box p {
+    color: #b5b5b5;
+}
+
+.main-conatct {
+    margin-top: 80px;
+}
+
+.sub-contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.contact-form {
+    width: 55%;
+    /* border: 2px solid white; */
+}
+
+.contact-form h3 {
+    font-size: 40px;
+}
+
+.contact-form p {
+    font-size: 14px;
+    color: #b5b5b5;
+}
+
+.form-cont {
+    padding: 20px;
+}
+
+.sec {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.field {
+    margin-top: 20px;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+option {
+    color: #000000;
+}
+
+#message {
+    min-height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.btn-sub {
+    cursor: pointer;
+    width: 100%;
+    padding-block: 10px;
+    background-color: #007dd6;
+    border: 2px solid #007dd6;
+    font-size: 16px;
+    transition: all ease-in-out 0.2s;
+}
+
+.btn-sub:hover {
+    background-color: transparent;
+}
+
+.other-item {
+    flex: 1;
+    /* border: 2px solid white; */
+}
+
+.other-cont {
+    margin-top: 100px;
+    padding: 10px;
+    width: 100%;
+    /* border: 2px solid white; */
+}
+
+.other-head {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-cont {
+    background-color: #007dd6;
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-cont i {
+    border: 2px solid white;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.whatsapp {
+    margin-top: 50px;
+}
+
+.map-cont {
+    margin-top: 80px;
+    height: 600px;
+}
+
+
+@media screen and (max-width: 1020px) {
+    .sub-contact {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padder {
+        padding-inline: 50px;
+    }
+
+    .hero-header {
+        font-size: 60px;
+        margin-top: 100px;
+        color: #ffffff;
+        z-index: 1;
+    }
+
+    .connect-title {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+
+    .box {
+        min-width: 100%;
+    }
+
+    .sub-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .other-cont {
+        margin-top: 0;
+    }
+
+    .map-cont {
+        margin-top: 50px;
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width: 468px) {
+    .padder {
+        padding-inline: 20px;
+    }
+
+    .hero-header {
+        font-size: 40px;
+    }
+
+    .box {
+        padding: 30px 10px;
+    }
+
+    .box a {
+        font-size: 16px;
+    }
+
+    .contact-form h3 {
+        font-size: 30px;
+    }
+
+    .map-cont {
+        margin-top: 50px;
+        height: 350px;
+    }
+}

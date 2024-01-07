@@ -21,10 +21,18 @@
     width: 100%;
 }
 
-.foot-item p{
-    font-size: 24px;
-    color: #007dd6;
-    text-decoration: underline;
+.tagline{
+    min-width: 400px;
+    color: #d6d6d6;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.foot-header{
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .foot-item ul li{
@@ -88,5 +96,9 @@
 
     .foot-item ul li a{
         text-align: center;
+    }
+
+    .tagline{
+        min-width: 200px;
     }
 }
