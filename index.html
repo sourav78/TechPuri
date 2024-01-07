@@ -11,13 +11,15 @@
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="css/navigation.css" />
 	<link rel="stylesheet" href="css/home_page.css" />
 	<link rel="stylesheet" href="css/hero_style.css" />
+	<link rel="stylesheet" href="css/footer.css" />
 </head>
 
 <body>
 
-	<div class="main-cont">
+	<div class="main-cont" id="home">
 		<nav class="nav-bar morphism" id="nav-b">
 			<div class="logo">
 				<img src="./images/TechPuri-logo.png" alt="">
@@ -31,7 +33,7 @@
 						<a href="/">Our Projects</a>
 					</li>
 					<li class="link">
-						<a href="/">Services</a>
+						<a href="#service-id">Services</a>
 					</li>
 					<li class="link">
 						<a href="/">About</a>
@@ -140,7 +142,7 @@
 				</div>
 			</div>
 
-			<div class="our-service padder">
+			<div class="our-service padder" id="service-id">
 				<div class="services">
 					<div class="service-head">
 						<h2 class="service-title">Our Services</h2>
@@ -280,6 +282,9 @@
 				copyright &copy; 2024
 			</div>
 		</div>
+		<a class="goto" href="#home">
+			<i class="fa-solid fa-angle-up" style="color: #ffffff;"></i>
+		</a>
 	</div>
 
 
