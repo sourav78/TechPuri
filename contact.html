@@ -74,31 +74,31 @@
                     <p>Have a question or need assistance? Don't hesitate to get in touch with us by sending a message.
                         We're here and ready to help you with anything you need!</p>
                     <div class="form-cont">
-                        <form>
+                        <form id="contactFrom">
                             <div class="sec">
                                 <label for="name">Name</label>
-                                <input id="name" class="field" placeholder="Name" type="text">
+                                <input id="name" class="field" required placeholder="Name" type="text">
                             </div>
                             <div class="sec">
                                 <label for="number">Phone Number</label>
-                                <input id="number" class="field" placeholder="Number" type="number">
+                                <input id="number" class="field" required placeholder="Number" type="text">
                             </div>
                             <div class="sec">
                                 <label for="email">Email</label>
-                                <input id="email" class="field" placeholder="Email" type="email">
+                                <input id="email" class="field" required placeholder="Email" type="email">
                             </div>
                             <div class="sec">
                                 <label for="service">Service</label>
-                                <select id="service" class="field">
+                                <select required id="service" class="field">
                                     <option value="">Select</option>
-                                    <option value="">Website Developement</option>
-                                    <option value="">App Developement</option>
-                                    <option value="">School or College Projects</option>
+                                    <option value="Website Developement">Website Developement</option>
+                                    <option value="App Developement">App Developement</option>
+                                    <option value="School or College Projects">School or College Projects</option>
                                 </select>
                             </div>
                             <div class="sec">
-                                <label for="email">Message</label>
-                                <textarea id="message" placeholder="Write a message" class="field"></textarea>
+                                <label for="message">Message</label>
+                                <textarea id="message" required placeholder="Write a message" class="field"></textarea>
                             </div>
                             <div class="sec">
                                 <button class="btn-sub" type="submit">SUBMIT</button>
@@ -190,6 +190,51 @@
             ff.classList.toggle("nav-links-active")
         })
 
+    </script>
+
+    <script>
+
+        const contactFrom = document.getElementById("contactFrom")
+
+        contactFrom.addEventListener("submit", async (e) => {
+            e.preventDefault()
+
+            const name = document.querySelector("#name").value
+            const number = document.querySelector("#number").value
+            const email = document.querySelector("#email").value
+            const service = document.querySelector("#service").value
+            const message = document.querySelector("#message").value
+
+            const formData = {
+                name,
+                number,
+                email,
+                service,
+                message
+            }
+
+            let response = await fetch("http://localhost:3001/user/send-email", {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+
+            let data = await response
+
+            if (data.status === 200) {
+                alert("Message sent succesfully")
+                document.querySelector("#name").value = ""
+                document.querySelector("#number").value = ""
+                document.querySelector("#email").value = ""
+                document.querySelector("#service").value = ""
+                document.querySelector("#message").value = ""
+            } else {
+                alert("Message sent not sent!!!")
+            }
+
+        })
     </script>
 
     <!-- Script for fontawesome icon -->
