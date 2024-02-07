@@ -224,6 +224,7 @@
             let data = await response
 
             if (data.status === 200) {
+                console.log(data.status);
                 alert("Message sent succesfully")
                 document.querySelector("#name").value = ""
                 document.querySelector("#number").value = ""
